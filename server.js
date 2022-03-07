@@ -32,17 +32,6 @@ app.get('/api/candidates', (req, res) => {
     });
 });
 
-// db.query(`SELECT * FROM candidates`, (err, rows) => {
-//     console.log(rows);
-// });
-
-// db.query(`SELECT * FROM candidates WHERE id = 1`, (err, row) => {
-//     if (err) {
-//         console.log(err);
-//     }
-//     console.log(row);
-// });
-
 app.delete('/api/candidate/:id', (req, res) => {
 
     const sql = `DELETE FROM candidates WHERE id = ?`;
@@ -105,7 +94,6 @@ app.get('/api/candidate/:id', (req, res) => {
         });
     });
 });
-
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
